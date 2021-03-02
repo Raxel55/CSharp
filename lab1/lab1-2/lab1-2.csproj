@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B2D2235F-7664-4B8D-A8A2-CFE6A1D5961F}</ProjectGuid>
+    <ProjectGuid>{DBA86FA9-1237-42B5-BCBC-E788F80182BE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>lab1</RootNamespace>
-    <AssemblyName>lab1</AssemblyName>
+    <RootNamespace>lab1_2</RootNamespace>
+    <AssemblyName>lab1-2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
