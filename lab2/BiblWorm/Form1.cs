@@ -12,6 +12,7 @@ namespace BiblWorm
 {
     public partial class Form1 : Form
     {
+        //Книги
         public string Author // автор
         {
             get { return textBox1.Text; }
@@ -65,6 +66,37 @@ namespace BiblWorm
             set { numericUpDown4.Value = value; }
         }
         List<Item> its = new List<Item>();
+        // Журналы
+        public string volume // том
+        {
+            get { return textBox4.Text; }
+            set { textBox4.Text = value; }
+        }
+        public int number // номер
+        {
+            get { return (int)numericUpDown5.Value; }
+            set { numericUpDown5.Value = value; }
+        }
+        public string title // название
+        {
+            get { return textBox5.Text; }
+            set { textBox5.Text = value; }
+        }
+        public int year // год выпуска
+        {
+            get { return (int)numericUpDown6.Value; }
+            set { numericUpDown6.Value = value; }
+        }
+        public int inv // Инвентарный номер
+        {
+            get { return (int)numericUpDown7.Value; }
+            set { numericUpDown7.Value = value; }
+        }
+        public bool taken // Подписка
+        {
+            get { return checkBox4.Checked; }
+            set { checkBox4.Checked = value; }
+        }
         public Form1()
         {
             InitializeComponent();
@@ -92,6 +124,15 @@ namespace BiblWorm
                 sb.Append("\n" + item.ToString());
             }
             richTextBox1.Text = sb.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Magazine m = new Magazine(volume, number, title, year, inv, taken);
+            its.Add(m);
+            volume = title = "";
+            number = year =inv = 0;
+            taken = false;
         }
     }
 }
