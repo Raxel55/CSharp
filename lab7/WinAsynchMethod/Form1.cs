@@ -91,5 +91,10 @@ namespace WinAsynchMethod
             }
             );
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, helpProvider1.HelpNamespace);
+        }
     }
 }
