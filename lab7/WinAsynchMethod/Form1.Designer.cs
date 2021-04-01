@@ -37,19 +37,24 @@ namespace WinAsynchMethod
             this.btnWork = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // txbA
             // 
+            this.helpProvider1.SetHelpString(this.txbA, "For input integer A");
             this.txbA.Location = new System.Drawing.Point(51, 16);
             this.txbA.Name = "txbA";
+            this.helpProvider1.SetShowHelp(this.txbA, true);
             this.txbA.Size = new System.Drawing.Size(100, 20);
             this.txbA.TabIndex = 0;
             // 
             // txbB
             // 
+            this.helpProvider1.SetHelpString(this.txbB, "For input integer B");
             this.txbB.Location = new System.Drawing.Point(279, 16);
             this.txbB.Name = "txbB";
+            this.helpProvider1.SetShowHelp(this.txbB, true);
             this.txbB.Size = new System.Drawing.Size(100, 20);
             this.txbB.TabIndex = 1;
             // 
@@ -73,8 +78,10 @@ namespace WinAsynchMethod
             // 
             // btnRun
             // 
+            this.helpProvider1.SetHelpString(this.btnRun, "Sum");
             this.btnRun.Location = new System.Drawing.Point(19, 54);
             this.btnRun.Name = "btnRun";
+            this.helpProvider1.SetShowHelp(this.btnRun, true);
             this.btnRun.Size = new System.Drawing.Size(75, 23);
             this.btnRun.TabIndex = 4;
             this.btnRun.Text = "Сумма";
@@ -83,8 +90,10 @@ namespace WinAsynchMethod
             // 
             // btnWork
             // 
+            this.helpProvider1.SetHelpString(this.btnWork, "Start work");
             this.btnWork.Location = new System.Drawing.Point(141, 111);
             this.btnWork.Name = "btnWork";
+            this.helpProvider1.SetShowHelp(this.btnWork, true);
             this.btnWork.Size = new System.Drawing.Size(75, 23);
             this.btnWork.TabIndex = 5;
             this.btnWork.Text = "Работа";
@@ -102,8 +111,10 @@ namespace WinAsynchMethod
             // 
             // button1
             // 
+            this.helpProvider1.SetHelpString(this.button1, "Sub");
             this.button1.Location = new System.Drawing.Point(19, 84);
             this.button1.Name = "button1";
+            this.helpProvider1.SetShowHelp(this.button1, true);
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Разность";
@@ -123,6 +134,10 @@ namespace WinAsynchMethod
             this.Controls.Add(this.lblA);
             this.Controls.Add(this.txbB);
             this.Controls.Add(this.txbA);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Асинхронный запуск";
             this.ResumeLayout(false);
@@ -140,6 +155,7 @@ namespace WinAsynchMethod
         private System.Windows.Forms.Button btnWork;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 
